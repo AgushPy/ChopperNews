@@ -1,0 +1,70 @@
+.fotonav{
+	border-radius: 20px;
+	height: auto;
+	width: 10%;
+	position: relative;
+	align-items: flex-end;
+	float: right;
+}
+
+.barra{
+	position: relative;
+	align-items: center;
+	height: 10vh;
+	
+}
+
+.contenedor{
+	display:flex;
+}
+
+.contenedorCarta{
+	display: flex;
+}
+
+.cartas{
+	height: auto;
+	margin: 10px;
+	align-items: center;
+	justify-content: space-between;
+	width: 300px
+	
+}
+
+.listas{
+	display:inline-block;
+	height: auto;
+}
+
+.ullist{
+	display:flex;
+	flex-flow: row wrap;
+}
+.foto{
+	width: 100%; 
+	height: auto;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+	.foto img{
+		width:300px;
+		height: auto;
+	
+	}
+	
+.titulo{
+	text-align: center;
+}
+.imagenNoticia{
+	width: 50%;
+	
+}
+.divImg{
+	text-align: center;
+}
+.imgcarta{
+	  width: 200px; 
+    height: 100;
+}
