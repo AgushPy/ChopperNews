@@ -34,27 +34,36 @@
   </div>
 </nav>
 
+<div class="alert alert-success" role="alert" th:if="${exito != null}"><h4 th:text="${exito}"></h4></div>
+	<div class="loggin" th:if="${exito != null}">
+	<a th:href="@{/noticia/home}"><button class="btn btn-secondary mt-3 botones">Loggear</button></a>	
+	<img th:src="@{https://sm.ign.com/t/ign_es/screenshot/default/1134207_hnfc.1280.jpg}" width="100%" />
+	</div>
+	<div class="alert alert-danger" role="alert" th:if="${error != null}"><h2 th:text="${error}"></h2></div>
+<div class="container " th:if="${exito == null}">
 
-<div class="container ">
 	
-	<form method="post" th:action="@{/noticia/cargarNoticia}" class="form col-md-6 my-5 mx-auto mb-3 " enctype="multipart/form-data">
+	
+	<form method="post" th:action="@{/registro}" class="formulario">
 		
-		<div class="mb-3 row">
-		<label for="titulo" class="form-label mb-3"> Titulo: <input type="text" class="form-control col-sm-10" id="titulo" name="titulo"> </label>
+		<div >
+			<h3 class="card-tittle">Registrate!</h3>
 		</div>
-		<div class="mb-3 row">
-		<label for="pequeniaDescripcion" class="form-label mb-3"> Mini Descripcion: <input type="text" class="form-control col-sm-10" id="pequeniaDescripcion" name="pequeniaDescripcion"> </label>
-		</div>
-		<div class="form-floating">
-  			<textarea class="form-control" name="cuerpo" placeholder="Escriba el cuerpo" id="floatingTextarea2" style="height: 100px"></textarea>
-  			<label for="floatingTextarea2">Descripción</label>
-		</div>
-		<br>
-		<input type="file" name="file" class="form-control" >
-		<br>
 		
-		<button type="submit"  class="col-6 mx-auto d-grid gap-2 btn btn-danger">Enviar</button>
+		<div class="form-group my-3">
+			<input type="text" class="form-control" name="nombre" placeholder="NOMBRE" th:value="${nombre}"/>
+		</div>
+		<div class="form-group my-3">
+			<input type="email" class="form-control"  name="email" placeholder="EMAIL" th:value="${email}"/>
+		</div>
+		<div class="form-group my-3">
+			<input type="password" class="form-control"  name="password" placeholder="PASSWORD" th:value="${password}"/>
+		</div>
+		<div class="form-group my-3">
+			<input type="password" class="form-control"  name="password2" placeholder="REPEAT PASSWORD" th:value="${password2}"/>
+		</div>
 		
+		<button type="submit" class="btn btn-primary mt-3 botones">Registrarme</button>
 	</form>
 	
 	<table>

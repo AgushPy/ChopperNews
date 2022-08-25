@@ -8,7 +8,7 @@ import com.choppernews.ChopperNews.entity.Usuario;
 
 @Service
 public interface UsuarioServicio {
-	public void crearUsuario();
+	public void crearUsuario(Usuario usuario);
 	public Usuario traerUsuario();
 	public void borrarUsuario();
 	public void actualizarUsuario();
